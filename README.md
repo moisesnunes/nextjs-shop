@@ -4,10 +4,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Você pode ver o resultado final do projeto com o link: [Nextjs-Shop](https://nextjs-shop-d9ba.vercel.app/)
 
-## 
+##
 
-!()[/public/home-screen.png]
+![](/public/home-screen.png)
 
 ##
 
-!()[/public/products.png]
+![](/public/products.png)
