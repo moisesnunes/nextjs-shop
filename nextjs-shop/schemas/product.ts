@@ -1,11 +1,9 @@
 import { defineField, defineType } from "sanity";
-import { RiMacbookLine } from "react-icons/ri";
 
 export default defineField({
   name: "product",
   title: "Product",
   type: "document",
-  icon: RiMacbookLine,
   fields: [
     defineField({
       name: "title",
