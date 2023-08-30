@@ -2,12 +2,14 @@ import Basket from "@/components/Basket";
 import Header from "@/components/Header";
 import Landing from "@/components/Landing";
 import Product from "@/components/Product";
+import Promo from "@/components/Promo";
 import { Tab } from "@headlessui/react";
 import { GetServerSideProps } from "next";
+import type { Session } from "next-auth";
+import { getSession } from "next-auth/react";
+import Image from "next/image";
 import { fetchCategories } from "../../utils/fectchCategories";
 import { fetchProducts } from "../../utils/fetchProdutcs";
-import { getSession } from "next-auth/react";
-import type { Session } from "next-auth";
 
 interface Props {
   categories: Category[];
@@ -75,9 +77,24 @@ export default function Home({ categories, products, session }: Props) {
             <Tab.Panel className="tabPanel"> {showProducts(2)} </Tab.Panel>
             <Tab.Panel className="tabPanel"> {showProducts(3)} </Tab.Panel>
             <Tab.Panel className="tabPanel"> {showProducts(4)} </Tab.Panel>
+            <Tab.Panel className="tabPanel"> {showProducts(5)} </Tab.Panel>
           </Tab.Panels>
         </Tab.Group>
       </section>
+      <section className="relative h-[100vh] bg-[#232428]">
+        <Promo />
+      </section>
+      <footer className="flex h-24 w-full items-center justify-center bg-[#111111]">
+        <a
+          className="flex items-center justify-center gap-2"
+          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{" "}
+          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+        </a>
+      </footer>
     </>
   );
 }
@@ -93,7 +110,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     props: {
       categories,
       products,
-      session
+      session,
     },
   };
 };
