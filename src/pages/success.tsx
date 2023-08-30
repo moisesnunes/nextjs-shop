@@ -49,7 +49,7 @@ function Success({ products }: Props) {
         </Link>
       </header>
 
-      <main className="grid gri-cols-1 lg:grid-cols-9">
+      <main className="grid gri-cols-1 lg:grid-cols-9 text-black">
         <section className="order-2 mx-auto max-w-xl lg:col-span-5 pb-12 lg:mx-0 lg:max-w-none lg:pr-16 lg:pt-16 xl:pl-16">
           <Link href="/">
             <div className="relative hidden h-24 w-12 ml-14 cursor-pointer transition lg:inline-flex">
